@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from booking.views import my_booking
+from about.views import about_us
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('booking/', my_booking, name='booking'),
+    path('about/', about_us, name='about'),
+
 ]
