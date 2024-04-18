@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Bravo's Bold Babershop</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Revitalize your style with precision and passion in every
+                    cut at our establishment.</h2>
+                <a class="btn btn-primary" href="#about">Make an Appointment</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Projects-->
+<section class="projects-section bg-light" id="projects">
+    <h1 class="mx-auto my-0 text-uppercase services-title">Our Services</h1>
+    <div class="container px-4 px-lg-5">
+        <!-- Project One Row-->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="{% static 'images/haircut.jpg' %}" alt="..." /></div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Haircut</h4>
+                            <p class="mb-0 text-white-50">Indulge in a transformative haircut experience, where skilled
+                                stylists craft your perfect look with precision and flair.<br><a href="">See More...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project Two Row-->
+        <div class="row gx-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="{% static 'images/shave.jpg' %}" alt="..." /></div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">Shaving</h4>
+                            <p class="mb-0 text-white-50">Experience grooming perfection with our precision shaving
+                                services, where every stroke is a work of art.<br><a href="">See More...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="signup-section" id="signup">
+    <h1 class="mx-auto my-0 text-uppercase opening-time-title">Opening Times</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="card px-4">
+                    <div class="card-body text-center">
+                        <ul class="list-unstyled">
+                            <li>Monday: <strong>09:00</strong> to <strong>17:00</strong></li>
+                            <li>Tuesday: <strong>09:00</strong> to <strong>17:00</strong></li>
+                            <li>Wednesday: <strong>09:00</strong> to <strong>17:00</strong></li>
+                            <li>Thursday: <strong>09:00</strong> to <strong>17:00</strong></li>
+                            <li>Friday: <strong>09:00</strong> to <strong>17:00</strong></li>
+                            <li>Saturday: <strong>Closed</strong></li>
+                            <li>Sunday: <strong>Closed</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
