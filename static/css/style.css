@@ -11182,22 +11182,20 @@
   .footer {
     padding: 5rem 0;
   }
+
+/* Custom css */
   
-  /* Custom css */
+.footer-black-text {
+  color: #1a1e21;
+}
   
-  .footer-black-text {
-    color: #1a1e21;
-  }
+.services-title {
+  text-align: center;
+  padding-bottom: 3rem;
+}
   
-  .services-title {
-    text-align: center;
-    padding-bottom: 3rem;
-  }
-  
-  .opening-time-title {
-    text-align: center;
-    padding-bottom: 2rem;
-    color: #fff;
-  }
-  
-  
+.opening-time-title {
+  text-align: center;
+  padding-bottom: 2rem;
+  color: #fff;
+}
