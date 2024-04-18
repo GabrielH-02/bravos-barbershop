@@ -8,14 +8,14 @@ class About(models.Model):
     Stores a single about me text field.
     """
     profile_image = models.CharField(max_length=25) #CloudinaryField
-    updated_on = models.DateField(auto_now=True)
+    updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
 
     class Meta:
         ordering = ['-updated_on']
 
     def __str__(self):
-        return self.updated_on
+        return f"This about us section was created on {self.updated_on}"
 
 class JobStatus(models.Model):
     """
