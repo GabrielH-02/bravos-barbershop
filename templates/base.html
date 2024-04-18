@@ -51,6 +51,14 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
+                        <a class="nav-link {% if request.path == our_services_url %}active{% endif %}" aria-current="page"
+                            href="">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == my_appointments_url %}active{% endif %}" aria-current="page"
+                            href="">My Appointments</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_logout' %}">Logout</a>
                     </li>
@@ -70,10 +78,12 @@
         </div>
     </nav>
 
-    {% block content %}
-    <!-- Content Goes here -->
-    {% endblock content %}
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
 
+    </main>
 
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
@@ -96,7 +106,7 @@
                                 <i class="fas fa-envelope text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0 footer-black-text">Email</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#">info@bravos-bold-babershop.com</a></div>
+                                <div class="small text-black-50"><a href="mailto:info@bravos-bold-babershop.com">info@bravos-bold-babershop.com</a></div>
                             </div>
                         </div>
                     </div>
