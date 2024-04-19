@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -7,7 +8,7 @@ class About(models.Model):
     """
     Stores a single about me text field.
     """
-    profile_image = models.CharField(max_length=25) #CloudinaryField
+    profile_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
 
@@ -38,7 +39,7 @@ class Stylist(models.Model):
     stylist_id = models.CharField(max_length=20, unique=True)
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    stylist_image = models.CharField(max_length=25) #CloudinaryField
+    stylist_image = CloudinaryField('image', default='placeholder')
     job_title = models.ForeignKey(
         JobStatus, on_delete=models.CASCADE, to_field='title'
     )
