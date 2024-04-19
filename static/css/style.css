@@ -11199,3 +11199,15 @@
   padding-bottom: 2rem;
   color: #fff;
 }
+
+body {
+  padding-top: 5.5rem; 
+}
+
+.message-overlay {
+  z-index: 1000;
+}
+
+.masthead {
+  z-index: 900;
+}
