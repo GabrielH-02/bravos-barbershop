@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import About
 from django.contrib import messages
+from .models import About
 from .forms import HairRequestForm
 
 def about_me(request):
