@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
-from .models import About
+from .models import About, Stylist
 from .forms import HairRequestForm
 
 def about_me(request):
@@ -14,6 +14,7 @@ def about_me(request):
             messages.add_message(request, messages.SUCCESS, "You're Hair request has been received! We will contact you shortly ...")
 
     about = About.objects.all().order_by('-updated_on').first()
+    stylist = Stylist.objects.all().order_by('first_name').first()
     hairrequest_form = HairRequestForm()
 
     return render(
@@ -21,6 +22,7 @@ def about_me(request):
         "about/about.html",
         {
             "about": about,
+            "stylist": stylist,
             "hairrequest_form": hairrequest_form
 
         },

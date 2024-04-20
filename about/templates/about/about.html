@@ -29,13 +29,11 @@
                 {% endif %}
             </div>
             <div class="col-lg-6 py-2">
-                <!-- Content goes directly underneath this -->
                 {{ about.content | safe }}
             </div>
         </div>
         <div class="row">
             <div class="col text-right">
-                <!-- Updated on field goes in here -->
                 <p class="text-end"><em>Updated on: <strong>{{ about.updated_on }}</strong></em></p>
             </div>
           </div>
@@ -43,18 +41,12 @@
 </section>
 
 
-
 <section class="signup-section" id="signup">
-    <h1 class="mx-auto my-0 text-uppercase opening-time-title">Our Team</h1>
+    <h1 class="mx-auto my-0 text-uppercase opening-time-title">{{ stylist.stylist_id }}</h1>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
+            <img src="{{ stylist.stylist_image.url }}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <img src="..." class="d-block w-100" alt="...">
