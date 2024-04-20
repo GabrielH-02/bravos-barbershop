@@ -14,7 +14,7 @@ def about_me(request):
             messages.add_message(request, messages.SUCCESS, "You're Hair request has been received! We will contact you shortly ...")
 
     about = About.objects.all().order_by('-updated_on').first()
-    stylist = Stylist.objects.all().order_by('first_name').first()
+    stylists = Stylist.objects.all()
     hairrequest_form = HairRequestForm()
 
     return render(
@@ -22,7 +22,7 @@ def about_me(request):
         "about/about.html",
         {
             "about": about,
-            "stylist": stylist,
+            "stylists": stylists,
             "hairrequest_form": hairrequest_form
 
         },
