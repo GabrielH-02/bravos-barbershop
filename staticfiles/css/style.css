@@ -11065,7 +11065,7 @@
   }
   .masthead h1, .masthead .h1 {
     font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
@@ -11079,7 +11079,7 @@
   }
   @media (min-width: 768px) {
     .masthead h1, .masthead .h1 {
-      font-size: 4rem;
+      font-size: 2rem;
       line-height: 4rem;
     }
   }
@@ -11130,7 +11130,7 @@
   }
   
   .signup-section {
-    padding: 10rem 0;
+    padding: 5rem 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../images/scissors-05.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -11182,22 +11182,41 @@
   .footer {
     padding: 5rem 0;
   }
+
+/* Custom css */
   
-  /* Custom css */
+.footer-black-text {
+  color: #1a1e21;
+}
   
-  .footer-black-text {
-    color: #1a1e21;
-  }
+.services-title {
+  text-align: center;
+  padding-bottom: 3rem;
+}
   
-  .services-title {
-    text-align: center;
-    padding-bottom: 3rem;
-  }
-  
-  .opening-time-title {
-    text-align: center;
-    padding-bottom: 2rem;
-    color: #fff;
-  }
-  
-  
+.opening-time-title {
+  text-align: center;
+  padding-bottom: 2rem;
+  color: #fff;
+}
+
+body {
+  padding-top: 5.5rem; 
+}
+
+.message-overlay {
+  z-index: 900;
+}
+
+.masthead {
+  z-index: 1000;
+}
+
+.bg-grey {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.profile-image {
+  border-radius: 15px;
+}

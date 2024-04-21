@@ -11205,11 +11205,11 @@ body {
 }
 
 .message-overlay {
-  z-index: 1000;
+  z-index: 900;
 }
 
 .masthead {
-  z-index: 900;
+  z-index: 1000;
 }
 
 .bg-grey {
