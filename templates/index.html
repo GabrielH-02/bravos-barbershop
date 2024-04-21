@@ -2,24 +2,26 @@
 {% load static %}
 {% block content %}
 
-<!-- Masthead-->
+<!-- Title Masthead -->
 <header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
                 <h1 class="mx-auto my-0 text-uppercase">Bravo's Bold Babershop</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5"><em>"Revitalize your style with precision and passion in every
-                    cut at our establishment."</em></h2>
-                <a class="btn btn-primary" href="#about">Make an Appointment</a>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5"><em>"Revitalize your style with precision and passion in
+                        every
+                        cut at our establishment."</em></h2>
+                <a class="btn btn-primary" href="">Make an Appointment</a>
             </div>
         </div>
     </div>
 </header>
-<!-- Projects-->
+
+<!-- Services section -->
 <section class="projects-section bg-light" id="projects">
     <h1 class="mx-auto my-0 text-uppercase services-title">Our Services</h1>
     <div class="container px-4 px-lg-5">
-        <!-- Project One Row-->
+        <!-- Service One Row -->
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
             <div class="col-lg-6"><img class="img-fluid" src="{% static 'images/haircut.jpg' %}" alt="..." /></div>
             <div class="col-lg-6">
@@ -28,13 +30,19 @@
                         <div class="project-text w-100 my-auto text-center text-lg-left">
                             <h4 class="text-white">Haircut</h4>
                             <p class="mb-0 text-white-50">Indulge in a transformative haircut experience, where skilled
-                                stylists craft your perfect look with precision and flair.<br><br><a href="">See More...</a></p>
+                                stylists craft your perfect look with precision and flair.<br><br>
+                                {% if user.is_authenticated %}
+                                <a href="{% url 'services' %}">See More...</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}">See More...</a>
+                                {% endif %}
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Project Two Row-->
+        <!-- Service Two Row -->
         <div class="row gx-0 justify-content-center">
             <div class="col-lg-6"><img class="img-fluid" src="{% static 'images/shave.jpg' %}" alt="..." /></div>
             <div class="col-lg-6 order-lg-first">
@@ -43,7 +51,13 @@
                         <div class="project-text w-100 my-auto text-center text-lg-right">
                             <h4 class="text-white">Shaving</h4>
                             <p class="mb-0 text-white-50">Experience grooming perfection with our precision shaving
-                                services, where every stroke is a work of art.<br><br><a href="">See More...</a></p>
+                                services, where every stroke is a work of art.<br><br>
+                                {% if user.is_authenticated %}
+                                <a href="{% url 'services' %}">See More...</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}">See More...</a>
+                                {% endif %}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -52,6 +66,7 @@
     </div>
 </section>
 
+<!-- Opening Times Section -->
 <section class="signup-section" id="signup">
     <h1 class="mx-auto my-0 text-uppercase opening-time-title">Opening Times</h1>
     <div class="container">
@@ -87,6 +102,5 @@
         </div>
     </div>
 </section>
-
 
 {% endblock %}

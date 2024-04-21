@@ -31,6 +31,3 @@ class HairRequestAdmin(SummernoteModelAdmin):
     search_fields = ['name', 'email', 'subject', 'created_on']
     list_filter = ('read', 'created_on',)
     summernote_fields = ('message',)
-
-# Register your models here.
-

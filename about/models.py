@@ -1,8 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
-
 
 class About(models.Model):
     """
@@ -17,6 +15,7 @@ class About(models.Model):
 
     def __str__(self):
         return f"This about us section was created on {self.updated_on}"
+
 
 class JobStatus(models.Model):
     """
@@ -49,6 +48,7 @@ class Stylist(models.Model):
 
     def __str__(self):
         return f"{self.stylist_id} is a {self.job_title}"
+
 
 class HairRequest(models.Model):
     """

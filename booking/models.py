@@ -2,10 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from about.models import JobStatus, Stylist
 
-# Create your models here.
-
 
 class Service(models.Model):
+    popular = models.IntegerField()
     title = models.CharField(max_length=200, unique=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     level = models.ForeignKey(
@@ -13,7 +12,7 @@ class Service(models.Model):
     )
 
     class Meta:
-        ordering = ['title']
+        ordering = ['popular']
 
     def __str__(self):
         return f"Service: {self.title} at the price of {self.price}, only a barber with qualifcations of {self.level} can do it"

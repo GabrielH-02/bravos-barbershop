@@ -3,10 +3,10 @@ from .models import Service, AppointmentTime, Appointment
 from django_summernote.admin import SummernoteModelAdmin
 
 
+
 @admin.register(Service)
 class ServiceAdmin(SummernoteModelAdmin):
-
-    list_display = ('title', 'price', 'level',)
+    list_display = ('title', 'price', 'level', 'popular',)
     search_fields = ['title', 'level']
     list_filter = ('level',)
 
@@ -26,4 +26,3 @@ class AppointmentAdmin(SummernoteModelAdmin):
     search_fields = ['author', 'stylist', 'title', 'date_appo']
     list_filter = ('date_appo',)
 
-# Register your models here.

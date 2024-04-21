@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Our Services Masthead -->
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Our Services</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5"><em>"Revitalize your style with precision and passion in
+                        every
+                        cut at our establishment."</em></h2>
+                <a class="btn btn-primary" href="">Make an Appointment</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Our Services Section -->
+<section class="projects-section" id="projects">
+    <h2 class="mx-auto my-0 text-uppercase text-center">Services Overview</h2>
+    <p class="text-black-50 text-center py-2 px-5">Explore our range of services, from classic and modern cuts to an
+        Italian shave. All treatments and prices are listed below.</p>
+    <div class="container px-5 px-lg-6">
+        <!-- Service Rows -->
+        {% for service in service_list %}
+        <div class="row align-items-center py-3 {% cycle 'bg-light' 'bg-white' %}">
+            <div class="col-8">
+                <h3 class="mb-0">{{ service.title }}</h3>
+            </div>
+            <div class="col-4 text-end">
+                <h3 class="mb-0"><strong>{{ service.price }}</strong></h3>
+            </div>
+        </div>
+        {% endfor %}
+        <a class="btn btn-primary w-100 my-4" href="">Schedule an Appointment</a>
+    </div>
+</section>
+
+{% endblock content %}
