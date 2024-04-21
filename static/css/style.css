@@ -11065,7 +11065,7 @@
   }
   .masthead h1, .masthead .h1 {
     font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
@@ -11079,7 +11079,7 @@
   }
   @media (min-width: 768px) {
     .masthead h1, .masthead .h1 {
-      font-size: 4rem;
+      font-size: 2rem;
       line-height: 4rem;
     }
   }
