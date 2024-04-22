@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- My Apointments Masthead -->
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Make an Appointment</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5"><em>"Revitalize your style with precision and passion in
+                        every
+                        cut at our establishment."</em></h2>
+                <a class="btn btn-primary text-uppercase w-100" href="">Book Now</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- My Appointments Section -->
+<section class="projects-section my-5" id="projects">
+    <h2 class="mx-auto my-0 text-uppercase text-center">My Appointments</h2>
+    <p class="text-black-50 text-center py-2 px-5">Access a comprehensive list of all your appointments, displaying every booking you've made for easy reference.</p>
+    <div class="container px-5 px-lg-6">
+        <!-- Displaying users appointments Rows -->
+        {% for appointment in appointment_list %}
+            {% if appointment.author == request.user %}
+                <div class="row align-items-center py-3 {% cycle 'bg-light' 'bg-white' %}">
+                    <div class="col-8">
+                        <h5 class="mb-0"><strong>{{ appointment.title }}</strong> <em class="text-black-50">with</em> <strong>{{ appointment.stylist }}</strong></h5>
+                    </div>
+                    <div class="col-4 text-end">
+                        <h5 class="mb-0"><strong>{{ appointment.date_appo }}</strong> <em class="text-black-50">at</em> <strong>{{ appointment.time_appo }}</strong></h5>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+
+{% endblock content %}

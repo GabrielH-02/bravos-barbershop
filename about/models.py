@@ -47,7 +47,7 @@ class Stylist(models.Model):
         ordering = ['first_name']
 
     def __str__(self):
-        return f"{self.stylist_id} is a {self.job_title}"
+        return self.stylist_id
 
 
 class HairRequest(models.Model):
