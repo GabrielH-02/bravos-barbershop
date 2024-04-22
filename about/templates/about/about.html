@@ -13,7 +13,10 @@
                 <h2 class="text-white-50 mx-auto mt-2 mb-5"><em>"Revitalize your style with precision and passion in
                         every
                         cut at our establishment."</em></h2>
-                <a class="btn btn-primary" href="#about">Make an Appointment</a>
+                    <a class="btn btn-primary"
+                        href="{% if user.is_authenticated %}{% url 'appointments' %}{% else %}{% url 'account_signup' %}{% endif %}">Make
+                        an Appointment
+                    </a>
             </div>
         </div>
     </div>
@@ -62,7 +65,9 @@
                                         width="65%" alt="{{ stylist.name }}">
                                     <h5 class="card-text py-2 text-uppercase mt-2 mb-2 bg-grey">{{ stylist.job_title }}
                                     </h5>
-                                    <a href="#" class="btn mt-2 mb-2 btn-primary">Book Appointment</a>
+                                    <a class="btn btn-primary"
+                                        href="{% if user.is_authenticated %}{% url 'appointments' %}{% else %}{% url 'account_signup' %}{% endif %}">Book
+                                        Appointment</a>
                                 </div>
                             </div>
                         </div>

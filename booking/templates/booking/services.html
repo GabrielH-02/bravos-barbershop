@@ -12,7 +12,10 @@
                 <h2 class="text-white-50 mx-auto mt-2 mb-5"><em>"Revitalize your style with precision and passion in
                         every
                         cut at our establishment."</em></h2>
-                <a class="btn btn-primary" href="">Make an Appointment</a>
+                <a class="btn btn-primary"
+                    href="{% if user.is_authenticated %}{% url 'appointments' %}{% else %}{% url 'account_signup' %}{% endif %}">Make
+                    an Appointment
+                </a>
             </div>
         </div>
     </div>
@@ -35,8 +38,10 @@
             </div>
         </div>
         {% endfor %}
-        <a class="btn btn-primary w-100 my-4" href="">Schedule an Appointment</a>
-    </div>
+        <a class="btn btn-primary w-100 my-4"
+            href="{% if user.is_authenticated %}{% url 'appointments' %}{% else %}{% url 'account_signup' %}{% endif %}">Schedule
+            an Appointment</a>
+        </div>
 </section>
 
 {% endblock content %}
