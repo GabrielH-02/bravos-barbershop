@@ -24,18 +24,40 @@
     <p class="text-black-50 text-center py-2 px-5">Access a comprehensive list of all your appointments, displaying every booking you've made for easy reference.</p>
     <div class="container px-5 px-lg-6">
         <!-- Displaying users appointments Rows -->
+        <div class="row">
         {% for appointment in appointment_list %}
-            {% if appointment.author == request.user %}
-                <div class="row align-items-center py-3 {% cycle 'bg-light' 'bg-white' %}">
-                    <div class="col-8">
-                        <h5 class="mb-0"><strong>{{ appointment.title }}</strong> <em class="text-black-50">with</em> <strong>{{ appointment.stylist }}</strong></h5>
-                    </div>
-                    <div class="col-4 text-end">
-                        <h5 class="mb-0"><strong>{{ appointment.date_appo }}</strong> <em class="text-black-50">at</em> <strong>{{ appointment.time_appo }}</strong></h5>
+        {% if appointment.author == request.user %}
+            <div class="col-md-4">
+                <div class="card mb-4 bg-light">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">{{ appointment.title }}</h4>
+                        <hr>
+                        <ul>
+                            <li class="card-text">Stylist: <strong>{{ appointment.stylist }}</strong></li>
+                            <li class="card-text">When: <strong>{{ appointment.date_appo }}</strong></li>
+                            <li class="card-text">Time: <strong>{{ appointment.time_appo }}</strong></li>
+                        </ul>
+                        <hr>
+                        <div class="row">
+                            <button class="btn btn-danger btn-delete">Delete</button>
+                            <button class="btn btn-success btn-edit">Edit</button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
             {% endif %}
+        </div>
+        {% endif %}
         {% endfor %}
+
+    <!-- Plus Button -->
+    <div class="container px-5 px-lg-6 text-center mt-5">
+        <button class="circle-btn" href=""><i class="fa-solid fa-plus"></i></button>
+    </div>
+
     </div>
 </section>
 
