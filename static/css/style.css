@@ -11065,7 +11065,7 @@
   }
   .masthead h1, .masthead .h1 {
     font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 2rem;
+    font-size: 1.3rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
@@ -11235,4 +11235,26 @@ body {
   border: 2px solid #64a19d;
   background-color: white;
   color: #64a19d;
+}
+
+#edit-btn {
+  padding: 1rem;
+  background-color: #9cd39f;
+}
+
+#delete-btn {
+  padding: 1rem;
+  background-color: #d85151;
+}
+
+#edit-btn:hover {
+  border: 2px solid #9cd39f;
+  background-color: white;
+  color: #9cd39f;
+}
+
+#delete-btn:hover {
+  border: 2px solid #d85151;
+  background-color: white;
+  color: #d85151;
 }
