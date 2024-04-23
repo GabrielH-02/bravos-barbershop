@@ -1,7 +1,11 @@
-from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+from .forms import AppointmentForm
 from .models import Service, Appointment
+
 
 
 class ServiceList(LoginRequiredMixin, generic.ListView):
@@ -9,6 +13,28 @@ class ServiceList(LoginRequiredMixin, generic.ListView):
     template_name = "booking/services.html"
 
 
-class AppointmentList(LoginRequiredMixin, generic.ListView):
-    queryset = Appointment.objects.all().order_by('date_appo')
-    template_name = "booking/my-appointments.html"
+@login_required
+def my_appointments(request):
+    """
+    Renders the My appointments page
+    """
+    if request.method == "POST":
+        appointment_form = AppointmentForm(data=request.POST)
+        if appointment_form.is_valid():
+            appointment = appointment_form.save(commit=False)
+            appointment.author = request.user  # Set the author to the logged-in user
+            appointment.save()
+            messages.success(request, "You have made your appointment! We look forward to seeing you.")
+            return redirect("appointments")
+
+    appointments = Appointment.objects.all().order_by('date_appo')
+    appointment_form = AppointmentForm()
+
+    return render(
+        request,
+        "booking/my-appointments.html",
+        {
+            "appointments": appointments,
+            "appointment_form": appointment_form
+        },
+    )
