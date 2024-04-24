@@ -1,13 +1,7 @@
 from .models import Appointment
 from django import forms
 
-
 class AppointmentForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
-            field.required = False
-
     class Meta:
         model = Appointment
         fields = ('title', 'stylist', 'date_appo', 'time_appo')
@@ -20,3 +14,6 @@ class AppointmentForm(forms.ModelForm):
             'date_appo': 'Appointment Date',
             'time_appo': 'Appointment Time',
         }
+        # Set all fields as required
+        for field_name in fields:
+            field = {field_name: forms.CharField(required=True)}
