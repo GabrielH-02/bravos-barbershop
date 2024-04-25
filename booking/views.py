@@ -40,6 +40,27 @@ def my_appointments(request):
         },
     )
 
+
+@login_required
+def appointment_edit(request, appointment_id):
+    """
+    view to edit appointment 
+    """
+    if request.method == "POST":
+
+        appointment = get_object_or_404(Appointment, pk=appointment_id)
+        appointment_form = AppointmentForm(data=request.POST, instance=appointment)
+        
+        if appointment_form.is_valid() and appointment.author == request.user:
+            appointment = appointment_form.save(commit=False)
+            appointment.save()
+            messages.add_message(request, messages.SUCCESS, 'Appointment Updated!')
+        else:
+                messages.add_message(request, messages.ERROR, 'Error updating appointment')
+        
+    return HttpResponseRedirect(reverse('appointments'))
+
+
 @login_required
 def appointment_delete(request, appointment_id):
     """

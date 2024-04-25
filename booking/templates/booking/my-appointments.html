@@ -5,7 +5,7 @@
 {% block content %}
 
 <!-- My Apointments Masthead -->
-<header class="masthead">
+<header class="masthead" id="update">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
@@ -13,11 +13,11 @@
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">Make appointments here! And find all you're upcoming appointments below..</h2>
                 <div class="card bg-light">
                     <div class="card-body">
-                        <form class="text-center" method="post">
+                        <form id="appointmentForm" class="text-center" method="post">
                             {{ appointment_form | crispy }}
                             {% csrf_token %}
                             <div class="text-center">
-                                <button class="btn btn-primary" type="submit">Submit</button>
+                                <button id="submitButton" class="btn btn-primary" type="submit">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -39,22 +39,22 @@
                     <div class="col-lg-4 mb-4">
                         <div class="card h-100 bg-light">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <div>
+                                <div id="appointment{{ appointment.id }}" class="appointment-details">
                                     <div class="row">
-                                        <h4 class="card-title">{{ appointment.title }}</h4>
+                                        <h4 id='id_title' class="card-title service-title">{{ appointment.title }}</h4>
                                         <h5 class="card-title text-black-50">{{ appointment.title.price }}</h5>
                                     </div>
                                     <hr>
                                     <ul>
-                                        <li class="card-text">Stylist: <strong>{{ appointment.stylist }}</strong></li>
-                                        <li class="card-text">When: <strong>{{ appointment.date_appo }}</strong></li>
-                                        <li class="card-text">Time: <strong>{{ appointment.time_appo }}</strong></li>
+                                        <li id='id_stylist' class="card-text stylist">Stylist: <strong>{{ appointment.stylist }}</strong></li>
+                                        <li id='id_date_appo' class="card-text date">When: <strong>{{ appointment.date_appo }}</strong></li>
+                                        <li id='id_time_appo' class="card-text time">Time: <strong>{{ appointment.time_appo }}</strong></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <hr>
                                     <div class="row justify-content-center">
-                                        <button class="col-5 btn btn-primary text-uppercase mx-2 edit-btn">Edit</button>
+                                        <button class="col-5 btn btn-primary text-uppercase mx-2 btn-edit edit-btn" data-appointment_id="{{ appointment.id }}" onclick="scrollToSection('update')">Edit</button>
                                         <button class="col-5 btn btn-primary text-uppercase mx-2 btn-delete delete-btn" data-appointment_id="{{ appointment.id }}">Delete</button>
                                     </div>
                                 </div>
