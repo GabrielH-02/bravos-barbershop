@@ -14,6 +14,5 @@ class AppointmentForm(forms.ModelForm):
             'date_appo': 'Appointment Date',
             'time_appo': 'Appointment Time',
         }
-        # Set all fields as required
         for field_name in fields:
             field = {field_name: forms.CharField(required=True)}

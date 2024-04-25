@@ -23,7 +23,7 @@ def my_appointments(request):
         appointment_form = AppointmentForm(data=request.POST)
         if appointment_form.is_valid():
             appointment = appointment_form.save(commit=False)
-            appointment.author = request.user  # Set the author to the logged-in user
+            appointment.author = request.user
             appointment.save()
             messages.success(request, "You have made your appointment! We look forward to seeing you.")
             return redirect("appointments")
