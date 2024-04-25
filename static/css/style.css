@@ -11221,24 +11221,30 @@ body {
   border-radius: 15px;
 }
 
-#edit-btn {
+.edit-btn {
+  color: white;
   padding: 1rem;
+  background-color: rgba(156, 211, 159, 0.8);
+  border: 5px solid #9cd39f;
+}
+
+
+.edit-btn:hover {
   background-color: #9cd39f;
+  color: white;
+  border: 5px solid #9cd39f;;
 }
 
-#delete-btn {
+
+.delete-btn {
+  color: white;
   padding: 1rem;
+  background-color: rgba(216, 81, 80, 0.8);
+  border: 5px solid #d85151;
+}
+
+.delete-btn:hover {
   background-color: #d85151;
-}
-
-#edit-btn:hover {
-  border: 2px solid #9cd39f;
-  background-color: white;
-  color: #9cd39f;
-}
-
-#delete-btn:hover {
-  border: 2px solid #d85151;
-  background-color: white;
-  color: #d85151;
+  color: white;
+  border: 5px solid #d85151;
 }

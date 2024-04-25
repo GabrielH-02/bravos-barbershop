@@ -39,3 +39,18 @@ def my_appointments(request):
             "appointment_form": appointment_form
         },
     )
+
+@login_required
+def appointment_delete(request, appointment_id):
+    """
+    view to delete appointment 
+    """
+    appointment = get_object_or_404(Appointment, pk=appointment_id)
+
+    if appointment.author == request.user:
+        appointment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Appointment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR,'You can only delete your own appointments!')
+
+    return HttpResponseRedirect(reverse('appointments'))
