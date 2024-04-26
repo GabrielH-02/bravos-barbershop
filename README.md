@@ -145,6 +145,7 @@ After the creation of the wireframe, it was time to map out the data of the site
 * [Google Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de) - Used to check and the performance and accessibility of the site.
 
 ### Others
+* [Grayscale](https://startbootstrap.com/theme/grayscale) - Used as a template theme.
 * [Am I Responsive](https://ui.dev/amiresponsive) - A site used to test the responsiveness of the page.
 * [FontAwesome](https://fontawesome.com/)   - Linked for all icons used on the site
 * [Google Fonts](https://fonts.google.com/) - Source of the site’s fonts.
