@@ -1,59 +1,58 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Bravo's Bold Barbershop
 
-Welcome Gabriel Holmes,
+![responsive-image](documentation/responsive-design.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+The live link can be found [Bravo's Bold Barbershop!](https://bravos-bold-barbershop-c6f1277863c4.herokuapp.com/)
 
-## Gitpod Reminders
+## Introduction
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Bravo's Bold Barbershop is a data-driven website for the 'Bravo's Bold Barbershop'. The site has multiple purposes, as a site it provides insight to the barbershop itself and those who work there. It also takes on the responsibility of booking online appointments. The site is targeted towards users who like to know more information about the establishment and to become a member of ‘Bravo’s Bold Barbershop’ to book one of the many services the barbershop provides. Bravo himself wishes to advertise his barbershop freely with up-to-date information and staff as well as to have the ability to take online appointments to a particular work schedule.
 
-`python3 -m http.server`
+*External User’s Main goal: The user would like to become a member of ‘Bravo's Bold Barbershop’, to book an appointment for one of the barbers' multiple services at a particular time and date. 
 
-A blue button should appear to click: _Make Public_,
+*Site Owner’s Main goal: The site owner would like the ability to take online appointments on their particular work schedule. 
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Features
 
-A blue button should appear to click: _Make Public_,
+### Existing Features
 
-Another blue button should appear to click: _Open Browser_.
+#### General Features
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Features Left to Implement
 
-To log into the Heroku toolbelt CLI:
+## Languages and Resources
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* [HTML5](https://html.spec.whatwg.org/multipage/)  -Markup language which makes up the content of the site.
+* [CSS3](https://www.w3.org/TR/css-2022/)   -Used to style the whole site.
+* [JavaScript](https://www.w3.org/TR/css-2022/)   -Used to style the whole site.
+* [FontAwesome](https://fontawesome.com/)   -Linked for all icons used on the site
+* [Google Fonts](https://fonts.google.com/) -Source of the site’s fonts.
+* [Favicon Generator](https://realfavicongenerator.net/) -Used to generate favicon files.
+* [GitHub](https://github.com/) -Repository for the site’s code.
+* [Codeanywhere](https://www.codecademy.com/)   -IDE used to write the site.
+* [HTML Validator](https://validator.w3.org/)   -Used to check and validate the HTML code used in the site.
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) -Used to check and validate the CSS code used in the site.
+* [JavaScript Validator](https://jshint.com//)   -Used to check and validate the JavaScript code used in the site.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+## Testing
 
-## Updates Since The Instructional Video
+### Validator Testing
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Accessibility 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Bugs
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### Fixed Bugs
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### Unfixed Bugs
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Deployment
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Credits
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Content
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
----
-
-Happy coding!
+### Media
