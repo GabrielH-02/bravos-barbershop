@@ -149,6 +149,7 @@ After the creation of the wireframe, it was time to map out the data of the site
 * [FontAwesome](https://fontawesome.com/)   - Linked for all icons used on the site
 * [Google Fonts](https://fonts.google.com/) - Source of the site’s fonts.
 * [Favicon Generator](https://realfavicongenerator.net/) - Used to generate favicon files.
+* [Pexels](https://www.pexels.com/) - Used for stocked images.
 
 
 ## Testing
