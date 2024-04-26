@@ -24,7 +24,7 @@ Logged-in User: The main goal for a logged-in user is to able to have the same a
 
 Site Admin / Site Owner: The main goal for the site owner is accessible and able to have control over every aspect of the site. A site would like to add personnel to the site to provide a clear representation of the staff working there. As well as being able to write an about section which can be updated at any time. Another key aspect is the ability to receive hair requests as well. Another aspect which an owner can update is the services they provide and the price at which they are. And finally, the main goal is to view users and the appointments they make.
 
-From those main points of information from those three main users the following stories were made to follow a clear representation of an agile workspace, each story with its own acceptance criteria. These user stories dive deeper into every aspect of the requirements this site needs! (Note: Some user stories have not been completed due to a change in the scope of the project.)
+From those main points of information from those three main users the following stories were made to follow a clear representation of an agile workspace, each story with its acceptance criteria. These user stories dive deeper into every aspect of the requirements this site needs! (Note: Some user stories have not been completed due to a change in the scope of the project.)
 
 For the full list of all 16 User Stories, this link will redirect you to the board of all the [User Stories](https://github.com/users/GabrielH-02/projects/5)
 
@@ -83,7 +83,7 @@ After the creation of the wireframe, it was time to map out the data of the site
 
 ![erd-image](documentation/erd-design.png)
 
-##Features
+## Features
 
 ### Existing Features
 
