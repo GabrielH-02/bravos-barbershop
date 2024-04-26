@@ -25,4 +25,3 @@ class AppointmentAdmin(SummernoteModelAdmin):
     list_display = ('author', 'stylist', 'title', 'date_appo', 'time_appo',)
     search_fields = ['author', 'stylist', 'title', 'date_appo']
     list_filter = ('date_appo',)
-

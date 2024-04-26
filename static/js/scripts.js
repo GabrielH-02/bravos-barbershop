@@ -1,6 +1,4 @@
-//
 // Scripts
-// 
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -48,9 +46,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+// Function to scoll smoothly to selected section
 function scrollToSection(sectionId) {
     var section = document.getElementById(sectionId);
     if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({
+            behavior: 'smooth'
+        });
     }
 }

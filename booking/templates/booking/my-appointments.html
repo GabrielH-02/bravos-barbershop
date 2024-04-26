@@ -4,13 +4,14 @@
 
 {% block content %}
 
-<!-- My Apointments Masthead -->
+<!-- Make Appointments Masthead -->
 <header class="masthead" id="update">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
                 <h1 class="mx-auto my-0 text-uppercase">Make Appointment</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">Make appointments here! And find all you're upcoming appointments below..</h2>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Make appointments here! And find all you're upcoming
+                    appointments below..</h2>
                 <div class="card bg-light">
                     <div class="card-body">
                         <form id="appointmentForm" class="text-center" method="post">
@@ -30,41 +31,57 @@
 <!-- My Appointments Section -->
 <section class="projects-section my-5" id="projects">
     <h2 class="mx-auto my-0 text-uppercase text-center">My Appointments</h2>
-    <p class="text-black-50 text-center py-2 px-5">Access a comprehensive list of all your appointments, displaying every booking you've made for easy reference.</p>
+    <p class="text-black-50 text-center py-2 px-5">Access a comprehensive list of all your appointments, displaying
+        every booking you've made for easy reference.</p>
     <div class="container px-5 px-lg-6">
         <!-- Displaying users appointments Rows -->
         <div class="row">
+            {% if appointments|length > 0 %}
             {% for appointment in appointments %}
-                {% if appointment.author == request.user %}
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100 bg-light">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <div id="appointment{{ appointment.id }}" class="appointment-details">
-                                    <div class="row">
-                                        <h4 id='id_title' class="card-title service-title">{{ appointment.title }}</h4>
-                                        <h5 class="card-title text-black-50">{{ appointment.title.price }}</h5>
-                                    </div>
-                                    <hr>
-                                    <ul>
-                                        <li id='id_stylist' class="card-text stylist">Stylist: <strong>{{ appointment.stylist }}</strong></li>
-                                        <li id='id_date_appo' class="card-text date">When: <strong>{{ appointment.date_appo }}</strong></li>
-                                        <li id='id_time_appo' class="card-text time">Time: <strong>{{ appointment.time_appo }}</strong></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <hr>
-                                    <div class="row justify-content-center">
-                                        <button class="col-5 btn btn-primary text-uppercase mx-2 btn-edit edit-btn" data-appointment_id="{{ appointment.id }}" onclick="scrollToSection('update')">Edit</button>
-                                        <button class="col-5 btn btn-primary text-uppercase mx-2 btn-delete delete-btn" data-appointment_id="{{ appointment.id }}">Delete</button>
-                                    </div>
-                                </div>
+            {% if appointment.author == request.user %}
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 bg-light">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div id="appointment{{ appointment.id }}" class="appointment-details">
+                            <div class="row">
+                                <h4 id='id_title' class="card-title service-title">{{ appointment.title }}</h4>
+                                <h5 class="card-title text-black-50">{{ appointment.title.price }}</h5>
+                            </div>
+                            <hr>
+                            <ul>
+                                <li id='id_stylist' class="card-text stylist">Stylist:
+                                    <strong>{{ appointment.stylist }}</strong></li>
+                                <li id='id_date_appo' class="card-text date">When:
+                                    <strong>{{ appointment.date_appo }}</strong></li>
+                                <li id='id_time_appo' class="card-text time">Time:
+                                    <strong>{{ appointment.time_appo }}</strong></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <hr>
+                            <div class="row justify-content-center">
+                                <button class="col-5 btn btn-primary text-uppercase mx-2 btn-edit edit-btn"
+                                    data-appointment_id="{{ appointment.id }}"
+                                    onclick="scrollToSection('update')">Edit</button>
+                                <button class="col-5 btn btn-primary text-uppercase mx-2 btn-delete delete-btn"
+                                    data-appointment_id="{{ appointment.id }}">Delete</button>
                             </div>
                         </div>
                     </div>
-                {% endif %}
+                </div>
+            </div>
+            {% endif %}
             {% endfor %}
+            {% else %}
+            <div class="col-12">
+                <h5 class="text-black-50 text-center py-2 px-5">It appears that you haven't made any appointments
+                    yet.<br>
+                    To schedule one, please utilize the <a class="btn-primary"
+                        onclick="scrollToSection('update')">form</a> provided above.
+                </h5>
+            </div>
+            {% endif %}
         </div>
-    </div>
 </section>
 
 <!-- Delete confirmation modal -->
@@ -86,10 +103,11 @@
     </div>
 </div>
 
+<!-- function for datepicker for date_appo -->
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.datepicker').datepicker({
-            format: 'yyyy-mm-dd', 
+            format: 'yyyy-mm-dd',
             autoclose: true
         });
     });

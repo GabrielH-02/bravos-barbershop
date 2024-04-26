@@ -3,12 +3,14 @@ from .models import About, JobStatus, Stylist, HairRequest
 from django_summernote.admin import SummernoteModelAdmin
 
 
+
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
     list_display = ('updated_on',)
     search_fields = ['updated_on']
     list_filter = ('updated_on',)
     summernote_fields = ('content',)
+
 
 
 @admin.register(JobStatus)
@@ -18,11 +20,13 @@ class JobStatusAdmin(SummernoteModelAdmin):
     list_filter = ('title',)
 
 
+
 @admin.register(Stylist)
 class StylistAdmin(SummernoteModelAdmin):
     list_display = ('stylist_id', 'first_name', 'last_name', 'job_title',)
     search_fields = ['stylist_id', 'first_name', 'last_name', 'job_title']
     list_filter = ('job_title',)
+
 
 
 @admin.register(HairRequest)

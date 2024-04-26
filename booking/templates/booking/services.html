@@ -41,7 +41,7 @@
         <a class="btn btn-primary w-100 my-4"
             href="{% if user.is_authenticated %}{% url 'appointments' %}{% else %}{% url 'account_signup' %}{% endif %}">Schedule
             an Appointment</a>
-        </div>
+    </div>
 </section>
 
 {% endblock content %}
