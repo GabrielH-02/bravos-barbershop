@@ -8,9 +8,9 @@ The live link can be found [Bravo's Bold Barbershop!](https://bravos-bold-barber
 
 Bravo's Bold Barbershop is a data-driven website for the 'Bravo's Bold Barbershop'. The site has multiple purposes, as a site it provides insight to the barbershop itself and those who work there. It also takes on the responsibility of booking online appointments. The site is targeted towards users who like to know more information about the establishment and to become a member of ‘Bravo’s Bold Barbershop’ to book one of the many services the barbershop provides. Bravo himself wishes to advertise his barbershop freely with up-to-date information and staff as well as to have the ability to take online appointments to a particular work schedule.
 
-*External User’s Main goal: The user would like to become a member of ‘Bravo's Bold Barbershop’, to book an appointment for one of the barbers' multiple services at a particular time and date. 
+* External User’s Main goal: The user would like to become a member of ‘Bravo's Bold Barbershop’, to book an appointment for one of the barbers' multiple services at a particular time and date. 
 
-*Site Owner’s Main goal: The site owner would like the ability to take online appointments on their particular work schedule. 
+* Site Owner’s Main goal: The site owner would like the ability to take online appointments on their particular work schedule. 
 
 
 ## Features
