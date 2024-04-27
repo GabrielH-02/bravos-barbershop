@@ -284,6 +284,7 @@ Regarding features left to implement, there are a few which would help make the 
 ![accessibility-source-services](documentation/bbb-lighthouse-06.png)
 
 **‘My Appointments’ page**
+
 ![accessibility-source-appointments](documentation/bbb-lighthouse-07.png)
 
 As a result, the accessibility of the whole site is not the greatest but it is usually within the 90% benchmark.
