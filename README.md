@@ -272,6 +272,53 @@ Regarding features left to implement, there are a few which would help make the 
 
 ## Deployment
 
+### Adjustment to workspace
+
+1.**Create an instance in ElephantSQL** - Then link this with your workspace
+2.** Install and provide Cloudinary** - Provide API key to link to the workspace
+3.**Create a requirements.txt file** - Create a list of all requirement installations
+4.**Create a Profile**- Create Gunicorn echo web
+
+### Heroku Deployment Guide
+
+The application was deployed using Heroku;
+
+1. **Log into Heroku or Create an Account**:
+   - If you haven't already, log into your Heroku account or sign up for a new one.
+
+2. **Create a New App**:
+   - From the Heroku dashboard, click on the "New" button in the top right corner.
+   - Select "Create new app" from the drop-down menu.
+   - Choose a unique name for your app and select the region
+   - Click the "Create app" button to proceed.
+
+3. **Config Vars**:
+   - Navigate to the "Settings" tab of your newly created app.
+   - Scroll down to the "Config Vars" section and click on the "Reveal Config Vars" button.
+   - Add the ‘CLOUDINARY_URL’ key with a value of the Cloudinary API key provided by Cloudinary when signed in.
+   - Add the ‘DATABASE_URL’ key with a value of the ElephantSQL API key provided by ElephantSQL when signed in.
+   - Add a SECRET_KEY, with a value of anything.
+
+4. **Connect to GitHub**:
+   - Go to the "Deploy" tab located at the top of the page.
+   - Scroll down to the "Deployment method" section and select "GitHub."
+   - Click the "Connect to GitHub" button to authorize Heroku to access your GitHub repositories.
+
+5. **Select Repository**:
+   - In the prompt that appears, enter your repository name and click the "Search" button.
+   - Once Heroku finds the correct repository, click the "Connect" button below the search bar to establish the connection.
+
+6. **Choose Deployment Method**:
+   - Scroll down to the bottom of the "Deploy" page.
+   - Under the "Deployment method" section, choose one of the following options:
+     - **Automatic deploy**:
+       - Select the appropriate branch from the dropdown menu.
+       - Click the "Enable Automatic Deploys" button to automatically deploy the app whenever there's an update pushed to GitHub.
+     - **Manual deploy**:
+       - Select the appropriate branch from the dropdown menu.
+       - Click the "Deploy Branch" button to manually deploy the current branch. Note that future updates will require manual redeployment.
+
+
 ## Credits
 
 ### Content
