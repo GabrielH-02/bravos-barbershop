@@ -274,10 +274,10 @@ Regarding features left to implement, there are a few which would help make the 
 
 ### Adjustment to workspace
 
-1.**Create an instance in ElephantSQL** - Then link this with your workspace
-2.** Install and provide Cloudinary** - Provide API key to link to the workspace
-3.**Create a requirements.txt file** - Create a list of all requirement installations
-4.**Create a Profile**- Create Gunicorn echo web
+1. **Create an instance in ElephantSQL** - Then link this with your workspace
+2. ** Install and provide Cloudinary** - Provide API key to link to the workspace
+3. **Create a requirements.txt file** - Create a list of all requirement installations
+4. **Create a Profile**- Create Gunicorn echo web
 
 ### Heroku Deployment Guide
 
