@@ -256,9 +256,52 @@ Regarding features left to implement, there are a few which would help make the 
 
 ## Testing
 
+There are two apps in the project; ‘Booking’ and ‘About’ apps. Due to time constraints, there are only automated tests for some aspects of the ‘About’ app! Other aspects of the site have been tested manually.
+
 ### Automated Testing
 
+**Booking App** - No automated tests
+
+**About App** - Eight tests were created to test features within the about and each was run, and each was passed.
+
+** Form Testing:** - The testing created for the forms, checks if the form is valid and tests if each field is required.
+
+**Views Testing:** - The testing creates for the views, checks if the ‘About’ page renders properly, checks that content can be added to the About section and that the hair request form greets the user with a success message. 
+
+![testing-image](documentation/testing.png)
+
 ### Manual Testing
+
+* I have tested the site on multiple browsers, such as; Chrome, Safari, and Firebox.
+* The site is responsive to all devices and has a clear and organized format. I have tested this by using dev tools on Chrome as well as sharing the link to the site on my other devices. The site also has been tested and its structure also adapts to the screen size.
+* All the information on the site is clear and visible and the contrast of colour is well set and is readable and easy to understand. I have also shared the site with other people to have an understanding of their views on the site and they all came to the same result that the site is easy to read and understand.
+* Manual Testing has taken place throughout the project.
+
+**General Testing:**
+* All the links have been manually tested, each directs to the correct place
+* User Authentication has been tested, which has been successful in that only a logged-in user can access exclusive content.
+* All external links target a blank therefore the user never leaves the page.
+* All pages render correctly.
+* All data is displayed correctly and the whole site is fully responsive to any device size.
+
+**‘About’ page:**
+* The ‘About’ page has been tested with automated tests, with the addition of a manual test.
+* Stylists can be added to the database and their data will be shown like the others. 
+* The About section and be updated and the date reflects this as well as the content within it.
+* The Contact Us form works correctly and functions to perfection. And displays the right message. 
+
+**Account pages:**
+* Sign-in has been tested manually and delivers the expected results. Such as responses to valid data and correct data, and redirecting to a particular page with the correct message. The same can be said for the register page as well as the log-out page.
+
+** ‘Our Services’ page:**
+* Our services page renders perfectly and displays all necessary data. I have also manually checked that a site admin can create more services and they will be displayed. 
+
+** ‘My Appointments’ page:**
+* Within the appointments page, I have tested many features multiple tests and everything seems to render and display as it should. There is only one bug which is mentioned in the unfixed bugs section. But under manual testing, a user can successfully, create, read, update and delete. Content from the page to the database, without the admin functionality.
+
+** As an admin:**
+* As admin there are so many aspects which need to be tested but again, all data models can be created, read, updated and deleted by the admin successfully from the admin panel to the site.
+
 
 ### Validator Testing
 
