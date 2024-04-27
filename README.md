@@ -112,7 +112,8 @@ After the creation of the wireframe, it was time to map out the data of the site
 
 ### Frameworks
 * [Django](https://www.djangoproject.com/) - Used to create project structure and utilities.
-* [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Used to have built-in stylisation and functionality.   
+* [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Used to have built-in stylisation and functionality.
+* [jQuery](https://jquery.com/) - Used to access jquery's library.     
 
 ### Django Add-on Packages
 * [Allauth](https://docs.allauth.org/en/latest/) - Used for account management
