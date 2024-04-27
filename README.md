@@ -263,12 +263,39 @@ Regarding features left to implement, there are a few which would help make the 
 ### Validator Testing
 
 ### Accessibility 
+* The site has been through the developer tool Lighthouse on Chrome and varies on its accessibility score on every page.
 
-### Bugs
+**‘Home’ page**
 
-#### Fixed Bugs
+![accessibility-source-home](documentation/bbb-lighthouse-01.png)
 
-#### Unfixed Bugs
+**‘About’ page**
+
+![accessibility-source-about](documentation/bbb-lighthouse-02.png)
+
+**Account pages**
+
+![accessibility-source-signin](documentation/bbb-lighthouse-03.png)
+![accessibility-source-signup](documentation/bbb-lighthouse-04.png)
+![accessibility-source-signout](documentation/bbb-lighthouse-05.png)
+
+**‘Our Services’ page**
+
+![accessibility-source-services](documentation/bbb-lighthouse-06.png)
+
+**‘My Appointments’ page**
+![accessibility-source-appointments](documentation/bbb-lighthouse-07.png)
+
+As a result, the accessibility of the whole is not the greatest but it is usually within the 90% benchmark.
+
+## Bugs
+
+### Unfixed Bugs
+
+There are two major unfixed bugs;
+
+1. **‘Home’ page** - On the home page and where the teaser services are shown the container does not appear the way it should on large laptop devices.
+2. **Edit Form** - When a user wishes to edit their appointment, when the button is clicked only the Stylist and Date of Appointment are pre-populated. 
 
 ## Deployment
 
