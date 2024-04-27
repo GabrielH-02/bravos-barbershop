@@ -262,6 +262,23 @@ Regarding features left to implement, there are a few which would help make the 
 
 ### Validator Testing
 
+**HTML**: 
+
+* There were errors, however, they have since been checked and adjusted. However, now there are no errors when passing through the official [W3C validator](https://validator.w3.org/)
+
+**CSS**:
+
+* There were no major errors, however, there were a few concerns about some of the CSS used for the built-in theme for the project when passing through the official [CSS validator](https://jigsaw.w3.org/css-validator/)
+
+**JavaScript**:
+
+* There were no major errors, however, there were several missing semicolons which have been addressed. As well as a few warnings which have been addressed using [Jshint](https://jshint.com/)
+
+**Python**:
+
+* There were no major errors, but a few warnings were addressed, and certain aspects of warnings weren’t able to be fixed due to the Django structure. Being passed through [PEP8](https://pep8ci.herokuapp.com/)
+
+
 ### Accessibility 
 * The site has been through the developer tool Lighthouse on Chrome and varies on its accessibility score on every page.
 
