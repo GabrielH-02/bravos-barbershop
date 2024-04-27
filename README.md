@@ -264,7 +264,7 @@ There are two apps in the project; ‘Booking’ and ‘About’ apps. Due to ti
 
 **About App** - Eight tests were created to test features within the about and each was run, and each was passed.
 
-** Form Testing:** - The testing created for the forms, checks if the form is valid and tests if each field is required.
+**Form Testing:** - The testing created for the forms, checks if the form is valid and tests if each field is required.
 
 **Views Testing:** - The testing creates for the views, checks if the ‘About’ page renders properly, checks that content can be added to the About section and that the hair request form greets the user with a success message. 
 
@@ -293,13 +293,13 @@ There are two apps in the project; ‘Booking’ and ‘About’ apps. Due to ti
 **Account pages:**
 * Sign-in has been tested manually and delivers the expected results. Such as responses to valid data and correct data, and redirecting to a particular page with the correct message. The same can be said for the register page as well as the log-out page.
 
-** ‘Our Services’ page:**
+**‘Our Services’ page:**
 * Our services page renders perfectly and displays all necessary data. I have also manually checked that a site admin can create more services and they will be displayed. 
 
-** ‘My Appointments’ page:**
+**‘My Appointments’ page:**
 * Within the appointments page, I have tested many features multiple tests and everything seems to render and display as it should. There is only one bug which is mentioned in the unfixed bugs section. But under manual testing, a user can successfully, create, read, update and delete. Content from the page to the database, without the admin functionality.
 
-** As an admin:**
+**As an admin:**
 * As admin there are so many aspects which need to be tested but again, all data models can be created, read, updated and deleted by the admin successfully from the admin panel to the site.
 
 
