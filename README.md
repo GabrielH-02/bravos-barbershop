@@ -26,7 +26,7 @@ Within this project, there were three main types of users to consider; a non-log
 
 From those main points of information from those three main users the following stories were made to follow a clear representation of an agile workspace, each story with its acceptance criteria. These user stories dive deeper into every aspect of the requirements this site needs! (Note: Some user stories have not been completed due to a change in the scope of the project.)
 
-For the full list of all 16 User Stories, this link will redirect you to the board of all the [User Stories](https://github.com/users/GabrielH-02/projects/5)
+For the full list of all 25 User Stories, (16 completed and 9 which are created for future developments) this link will redirect you to the board of all the [User Stories](https://github.com/users/GabrielH-02/projects/5)
 
 
 ### Wireframe
